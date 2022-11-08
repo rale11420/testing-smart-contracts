@@ -1,0 +1,228 @@
++ Contract Ownable
+  - From Ownable
+    - constructor() (internal)
+    - transferOwnership(address) (public)
+
++ Contract Ticket (Most derived contract)
+  - From ERC721Enumerable
+    - _addTokenToAllTokensEnumeration(uint256) (private)
+    - _addTokenToOwnerEnumeration(address,uint256) (private)
+    - _removeTokenFromAllTokensEnumeration(uint256) (private)
+    - _removeTokenFromOwnerEnumeration(address,uint256) (private)
+    - supportsInterface(bytes4) (public)
+    - tokenByIndex(uint256) (public)
+    - tokenOfOwnerByIndex(address,uint256) (public)
+    - totalSupply() (public)
+  - From ERC721
+    - _afterTokenTransfer(address,address,uint256) (internal)
+    - _approve(address,uint256) (internal)
+    - _baseURI() (internal)
+    - _burn(uint256) (internal)
+    - _checkOnERC721Received(address,address,uint256,bytes) (private)
+    - _exists(uint256) (internal)
+    - _isApprovedOrOwner(address,uint256) (internal)
+    - _mint(address,uint256) (internal)
+    - _requireMinted(uint256) (internal)
+    - _safeMint(address,uint256) (internal)
+    - _safeMint(address,uint256,bytes) (internal)
+    - _safeTransfer(address,address,uint256,bytes) (internal)
+    - _setApprovalForAll(address,address,bool) (internal)
+    - _transfer(address,address,uint256) (internal)
+    - approve(address,uint256) (public)
+    - balanceOf(address) (public)
+    - constructor(string,string) (public)
+    - getApproved(uint256) (public)
+    - isApprovedForAll(address,address) (public)
+    - name() (public)
+    - ownerOf(uint256) (public)
+    - safeTransferFrom(address,address,uint256) (public)
+    - safeTransferFrom(address,address,uint256,bytes) (public)
+    - setApprovalForAll(address,bool) (public)
+    - symbol() (public)
+    - tokenURI(uint256) (public)
+    - transferFrom(address,address,uint256) (public)
+  - From Context
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From Ticket
+    - _beforeTokenTransfer(address,address,uint256) (internal)
+    - burn(uint256) (public)
+    - constructor() (public)
+    - mint(address) (public)
+
++ Contract TicketingService (Most derived contract)
+  - From Ownable
+    - transferOwnership(address) (public)
+  - From TicketingService
+    - constructor() (public)
+    - mintBatch(address[]) (public)
+    - mintTicket(address) (public)
+    - refundTicket(uint256) (public)
+
++ Contract ERC721
+  - From Context
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From ERC721
+    - _afterTokenTransfer(address,address,uint256) (internal)
+    - _approve(address,uint256) (internal)
+    - _baseURI() (internal)
+    - _beforeTokenTransfer(address,address,uint256) (internal)
+    - _burn(uint256) (internal)
+    - _checkOnERC721Received(address,address,uint256,bytes) (private)
+    - _exists(uint256) (internal)
+    - _isApprovedOrOwner(address,uint256) (internal)
+    - _mint(address,uint256) (internal)
+    - _requireMinted(uint256) (internal)
+    - _safeMint(address,uint256) (internal)
+    - _safeMint(address,uint256,bytes) (internal)
+    - _safeTransfer(address,address,uint256,bytes) (internal)
+    - _setApprovalForAll(address,address,bool) (internal)
+    - _transfer(address,address,uint256) (internal)
+    - approve(address,uint256) (public)
+    - balanceOf(address) (public)
+    - constructor(string,string) (public)
+    - getApproved(uint256) (public)
+    - isApprovedForAll(address,address) (public)
+    - name() (public)
+    - ownerOf(uint256) (public)
+    - safeTransferFrom(address,address,uint256) (public)
+    - safeTransferFrom(address,address,uint256,bytes) (public)
+    - setApprovalForAll(address,bool) (public)
+    - supportsInterface(bytes4) (public)
+    - symbol() (public)
+    - tokenURI(uint256) (public)
+    - transferFrom(address,address,uint256) (public)
+
++ Contract IERC721
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+  - From IERC721
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - getApproved(uint256) (external)
+    - isApprovedForAll(address,address) (external)
+    - ownerOf(uint256) (external)
+    - safeTransferFrom(address,address,uint256) (external)
+    - safeTransferFrom(address,address,uint256,bytes) (external)
+    - setApprovalForAll(address,bool) (external)
+    - transferFrom(address,address,uint256) (external)
+
++ Contract IERC721Receiver (Most derived contract)
+  - From IERC721Receiver
+    - onERC721Received(address,address,uint256,bytes) (external)
+
++ Contract ERC721Enumerable
+  - From ERC721
+    - _afterTokenTransfer(address,address,uint256) (internal)
+    - _approve(address,uint256) (internal)
+    - _baseURI() (internal)
+    - _burn(uint256) (internal)
+    - _checkOnERC721Received(address,address,uint256,bytes) (private)
+    - _exists(uint256) (internal)
+    - _isApprovedOrOwner(address,uint256) (internal)
+    - _mint(address,uint256) (internal)
+    - _requireMinted(uint256) (internal)
+    - _safeMint(address,uint256) (internal)
+    - _safeMint(address,uint256,bytes) (internal)
+    - _safeTransfer(address,address,uint256,bytes) (internal)
+    - _setApprovalForAll(address,address,bool) (internal)
+    - _transfer(address,address,uint256) (internal)
+    - approve(address,uint256) (public)
+    - balanceOf(address) (public)
+    - constructor(string,string) (public)
+    - getApproved(uint256) (public)
+    - isApprovedForAll(address,address) (public)
+    - name() (public)
+    - ownerOf(uint256) (public)
+    - safeTransferFrom(address,address,uint256) (public)
+    - safeTransferFrom(address,address,uint256,bytes) (public)
+    - setApprovalForAll(address,bool) (public)
+    - symbol() (public)
+    - tokenURI(uint256) (public)
+    - transferFrom(address,address,uint256) (public)
+  - From Context
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From ERC721Enumerable
+    - _addTokenToAllTokensEnumeration(uint256) (private)
+    - _addTokenToOwnerEnumeration(address,uint256) (private)
+    - _beforeTokenTransfer(address,address,uint256) (internal)
+    - _removeTokenFromAllTokensEnumeration(uint256) (private)
+    - _removeTokenFromOwnerEnumeration(address,uint256) (private)
+    - supportsInterface(bytes4) (public)
+    - tokenByIndex(uint256) (public)
+    - tokenOfOwnerByIndex(address,uint256) (public)
+    - totalSupply() (public)
+
++ Contract IERC721Enumerable
+  - From IERC721
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - getApproved(uint256) (external)
+    - isApprovedForAll(address,address) (external)
+    - ownerOf(uint256) (external)
+    - safeTransferFrom(address,address,uint256) (external)
+    - safeTransferFrom(address,address,uint256,bytes) (external)
+    - setApprovalForAll(address,bool) (external)
+    - transferFrom(address,address,uint256) (external)
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+  - From IERC721Enumerable
+    - tokenByIndex(uint256) (external)
+    - tokenOfOwnerByIndex(address,uint256) (external)
+    - totalSupply() (external)
+
++ Contract IERC721Metadata
+  - From IERC721
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - getApproved(uint256) (external)
+    - isApprovedForAll(address,address) (external)
+    - ownerOf(uint256) (external)
+    - safeTransferFrom(address,address,uint256) (external)
+    - safeTransferFrom(address,address,uint256,bytes) (external)
+    - setApprovalForAll(address,bool) (external)
+    - transferFrom(address,address,uint256) (external)
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+  - From IERC721Metadata
+    - name() (external)
+    - symbol() (external)
+    - tokenURI(uint256) (external)
+
++ Contract Address (Most derived contract)
+  - From Address
+    - functionCall(address,bytes) (internal)
+    - functionCall(address,bytes,string) (internal)
+    - functionCallWithValue(address,bytes,uint256) (internal)
+    - functionCallWithValue(address,bytes,uint256,string) (internal)
+    - functionDelegateCall(address,bytes) (internal)
+    - functionDelegateCall(address,bytes,string) (internal)
+    - functionStaticCall(address,bytes) (internal)
+    - functionStaticCall(address,bytes,string) (internal)
+    - isContract(address) (internal)
+    - sendValue(address,uint256) (internal)
+    - verifyCallResult(bool,bytes,string) (internal)
+
++ Contract Context
+  - From Context
+    - _msgData() (internal)
+    - _msgSender() (internal)
+
++ Contract Strings (Most derived contract)
+  - From Strings
+    - toHexString(address) (internal)
+    - toHexString(uint256) (internal)
+    - toHexString(uint256,uint256) (internal)
+    - toString(uint256) (internal)
+
++ Contract ERC165
+  - From ERC165
+    - supportsInterface(bytes4) (public)
+
++ Contract IERC165
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+
+../contracts/TicketingService.sol analyzed (14 contracts)

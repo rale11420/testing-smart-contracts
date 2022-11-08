@@ -1,0 +1,26 @@
+Compiled with solc
+Number of lines: 1297 (+ 0 in dependencies, + 0 in tests)
+Number of assembly lines: 0
+Number of contracts: 14 (+ 0 in dependencies, + 0 tests) 
+
+Number of optimization issues: 14
+Number of informational issues: 41
+Number of low issues: 9
+Number of medium issues: 1
+Number of high issues: 1
+ERCs: ERC165, ERC721
+
++------------------+-------------+---------------+------------+--------------+--------------------+
+|       Name       | # functions |      ERCS     | ERC20 info | Complex code |      Features      |
++------------------+-------------+---------------+------------+--------------+--------------------+
+|      Ticket      |      62     | ERC165,ERC721 |            |      No      |      Assembly      |
+| TicketingService |      7      |               |            |      No      |    Receive ETH     |
+|                  |             |               |            |              |      Send ETH      |
+|                  |             |               |            |              | Tokens interaction |
+| IERC721Receiver  |      1      |               |            |      No      |                    |
+|     Address      |      11     |               |            |      No      |      Send ETH      |
+|                  |             |               |            |              |    Delegatecall    |
+|                  |             |               |            |              |      Assembly      |
+|     Strings      |      5      |               |            |     Yes      |                    |
++------------------+-------------+---------------+------------+--------------+--------------------+
+../contracts/TicketingService.sol analyzed (14 contracts)

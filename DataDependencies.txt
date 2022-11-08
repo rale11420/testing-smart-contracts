@@ -1,0 +1,1026 @@
+|              Variable              |    Dependencies   |
++------------------------------------+-------------------+
+|                from                | ['from', 'owner'] |
+|                 to                 |       ['to']      |
+|                                    |         []        |
+|            ERC721._name            |         []        |
+|           ERC721._symbol           |         []        |
+|           ERC721._owners           |         []        |
+|          ERC721._balances          |         []        |
+|       ERC721._tokenApprovals       |         []        |
+|     ERC721._operatorApprovals      |         []        |
+|   ERC721Enumerable._ownedTokens    |         []        |
+| ERC721Enumerable._ownedTokensIndex |         []        |
+|    ERC721Enumerable._allTokens     |         []        |
+|  ERC721Enumerable._allTokensIndex  |         []        |
+|    Ticket.MAX_TICKETS_PER_USER     |         []        |
++------------------------------------+-------------------+
+Function slitherConstructorConstantVariables()
++------------------------------------+--------------+
+|              Variable              | Dependencies |
++------------------------------------+--------------+
+|            ERC721._name            |      []      |
+|           ERC721._symbol           |      []      |
+|           ERC721._owners           |      []      |
+|          ERC721._balances          |      []      |
+|       ERC721._tokenApprovals       |      []      |
+|     ERC721._operatorApprovals      |      []      |
+|   ERC721Enumerable._ownedTokens    |      []      |
+| ERC721Enumerable._ownedTokensIndex |      []      |
+|    ERC721Enumerable._allTokens     |      []      |
+|  ERC721Enumerable._allTokensIndex  |      []      |
+|    Ticket.MAX_TICKETS_PER_USER     |      []      |
++------------------------------------+--------------+
+Contract TicketingService
++-----------------------+-------------------------------------+
+|        Variable       |             Dependencies            |
++-----------------------+-------------------------------------+
+|         owner         | ['newOwner', 'msg.sender', 'owner'] |
+|     ticketContract    |          ['ticketContract']         |
+|         PRICE         |              ['PRICE']              |
+| MAX_TICKETS_PER_BATCH |      ['MAX_TICKETS_PER_BATCH']      |
++-----------------------+-------------------------------------+
+
+Function constructor()
++----------------------------------------+--------------+
+|                Variable                | Dependencies |
++----------------------------------------+--------------+
+|             Ownable.owner              |      []      |
+|    TicketingService.ticketContract     |      []      |
+|         TicketingService.PRICE         |      []      |
+| TicketingService.MAX_TICKETS_PER_BATCH |      []      |
++----------------------------------------+--------------+
+Function mintTicket(address)
++----------------------------------------+--------------------+
+|                Variable                |    Dependencies    |
++----------------------------------------+--------------------+
+|                receiver                |         []         |
+|             Ownable.owner              |         []         |
+|    TicketingService.ticketContract     | ['ticketContract'] |
+|         TicketingService.PRICE         |     ['PRICE']      |
+| TicketingService.MAX_TICKETS_PER_BATCH |         []         |
++----------------------------------------+--------------------+
+Function mintBatch(address[])
++----------------------------------------+---------------------------+
+|                Variable                |        Dependencies       |
++----------------------------------------+---------------------------+
+|               receivers                |       ['receivers']       |
+|                   i                    |           ['i']           |
+|             Ownable.owner              |             []            |
+|    TicketingService.ticketContract     |             []            |
+|         TicketingService.PRICE         |             []            |
+| TicketingService.MAX_TICKETS_PER_BATCH | ['MAX_TICKETS_PER_BATCH'] |
++----------------------------------------+---------------------------+
+Function refundTicket(uint256)
++----------------------------------------+--------------------+
+|                Variable                |    Dependencies    |
++----------------------------------------+--------------------+
+|                tokenId                 |         []         |
+|             Ownable.owner              |         []         |
+|    TicketingService.ticketContract     | ['ticketContract'] |
+|         TicketingService.PRICE         |     ['PRICE']      |
+| TicketingService.MAX_TICKETS_PER_BATCH |         []         |
++----------------------------------------+--------------------+
+Function slitherConstructorConstantVariables()
++----------------------------------------+--------------+
+|                Variable                | Dependencies |
++----------------------------------------+--------------+
+|             Ownable.owner              |      []      |
+|    TicketingService.ticketContract     |      []      |
+|         TicketingService.PRICE         |      []      |
+| TicketingService.MAX_TICKETS_PER_BATCH |      []      |
++----------------------------------------+--------------+
+Contract ERC721
++--------------------+---------------------------+
+|      Variable      |        Dependencies       |
++--------------------+---------------------------+
+|       _name        |     ['_name', 'name_']    |
+|      _symbol       |   ['_symbol', 'symbol_']  |
+|      _owners       |     ['to', '_owners']     |
+|     _balances      |       ['_balances']       |
+|  _tokenApprovals   | ['to', '_tokenApprovals'] |
+| _operatorApprovals |   ['_operatorApprovals']  |
++--------------------+---------------------------+
+
+Function constructor(string,string)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|           name_           |      []      |
+|          symbol_          |      []      |
+|        ERC721._name       |  ['name_']   |
+|       ERC721._symbol      | ['symbol_']  |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function supportsInterface(bytes4)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|        interfaceId        |      []      |
+|                           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function balanceOf(address)
++---------------------------+---------------+
+|          Variable         |  Dependencies |
++---------------------------+---------------+
+|           owner           |       []      |
+|                           |       []      |
+|        ERC721._name       |       []      |
+|       ERC721._symbol      |       []      |
+|       ERC721._owners      |       []      |
+|      ERC721._balances     | ['_balances'] |
+|   ERC721._tokenApprovals  |       []      |
+| ERC721._operatorApprovals |       []      |
++---------------------------+---------------+
+Function ownerOf(uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          tokenId          | ['tokenId']  |
+|                           |      []      |
+|           owner           | ['_owners']  |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      | ['_owners']  |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function name()
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|                           |      []      |
+|        ERC721._name       |  ['_name']   |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function symbol()
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|                           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      | ['_symbol']  |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function tokenURI(uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          tokenId          |      []      |
+|                           |      []      |
+|          baseURI          |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _baseURI()
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|                           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function approve(address,uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|             to            |      []      |
+|          tokenId          |      []      |
+|           owner           |  ['owner']   |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function getApproved(uint256)
++---------------------------+---------------------+
+|          Variable         |     Dependencies    |
++---------------------------+---------------------+
+|          tokenId          |     ['tokenId']     |
+|                           |          []         |
+|        ERC721._name       |          []         |
+|       ERC721._symbol      |          []         |
+|       ERC721._owners      |          []         |
+|      ERC721._balances     |          []         |
+|   ERC721._tokenApprovals  | ['_tokenApprovals'] |
+| ERC721._operatorApprovals |          []         |
++---------------------------+---------------------+
+Function setApprovalForAll(address,bool)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          operator         |      []      |
+|          approved         |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function isApprovedForAll(address,address)
++---------------------------+------------------------+
+|          Variable         |      Dependencies      |
++---------------------------+------------------------+
+|           owner           |       ['owner']        |
+|          operator         |      ['spender']       |
+|                           |           []           |
+|        ERC721._name       |           []           |
+|       ERC721._symbol      |           []           |
+|       ERC721._owners      |           []           |
+|      ERC721._balances     |           []           |
+|   ERC721._tokenApprovals  |           []           |
+| ERC721._operatorApprovals | ['_operatorApprovals'] |
++---------------------------+------------------------+
+Function transferFrom(address,address,uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|            from           |      []      |
+|             to            |      []      |
+|          tokenId          |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function safeTransferFrom(address,address,uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|            from           |      []      |
+|             to            |      []      |
+|          tokenId          |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function safeTransferFrom(address,address,uint256,bytes)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|            from           |   ['from']   |
+|             to            |    ['to']    |
+|          tokenId          | ['tokenId']  |
+|            data           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _safeTransfer(address,address,uint256,bytes)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|            from           |   ['from']   |
+|             to            |    ['to']    |
+|          tokenId          | ['tokenId']  |
+|            data           |   ['data']   |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _exists(uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          tokenId          | ['tokenId']  |
+|                           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      | ['_owners']  |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _isApprovedOrOwner(address,uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          spender          |      []      |
+|          tokenId          | ['tokenId']  |
+|                           |      []      |
+|           owner           |  ['owner']   |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _safeMint(address,uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|             to            |      []      |
+|          tokenId          |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _safeMint(address,uint256,bytes)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|             to            |    ['to']    |
+|          tokenId          | ['tokenId']  |
+|            data           |      []      |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _mint(address,uint256)
++---------------------------+-------------------+
+|          Variable         |    Dependencies   |
++---------------------------+-------------------+
+|             to            |       ['to']      |
+|          tokenId          |    ['tokenId']    |
+|        ERC721._name       |         []        |
+|       ERC721._symbol      |         []        |
+|       ERC721._owners      | ['to', '_owners'] |
+|      ERC721._balances     |   ['_balances']   |
+|   ERC721._tokenApprovals  |         []        |
+| ERC721._operatorApprovals |         []        |
++---------------------------+-------------------+
+Function _burn(uint256)
++---------------------------+---------------+
+|          Variable         |  Dependencies |
++---------------------------+---------------+
+|          tokenId          |       []      |
+|           owner           |   ['owner']   |
+|        ERC721._name       |       []      |
+|       ERC721._symbol      |       []      |
+|       ERC721._owners      |  ['_owners']  |
+|      ERC721._balances     | ['_balances'] |
+|   ERC721._tokenApprovals  |       []      |
+| ERC721._operatorApprovals |       []      |
++---------------------------+---------------+
+Function _transfer(address,address,uint256)
++---------------------------+-------------------+
+|          Variable         |    Dependencies   |
++---------------------------+-------------------+
+|            from           |      ['from']     |
+|             to            |       ['to']      |
+|          tokenId          |    ['tokenId']    |
+|        ERC721._name       |         []        |
+|       ERC721._symbol      |         []        |
+|       ERC721._owners      | ['to', '_owners'] |
+|      ERC721._balances     |   ['_balances']   |
+|   ERC721._tokenApprovals  |         []        |
+| ERC721._operatorApprovals |         []        |
++---------------------------+-------------------+
+Function _approve(address,uint256)
++---------------------------+---------------------------+
+|          Variable         |        Dependencies       |
++---------------------------+---------------------------+
+|             to            |           ['to']          |
+|          tokenId          |        ['tokenId']        |
+|        ERC721._name       |             []            |
+|       ERC721._symbol      |             []            |
+|       ERC721._owners      |             []            |
+|      ERC721._balances     |             []            |
+|   ERC721._tokenApprovals  | ['to', '_tokenApprovals'] |
+| ERC721._operatorApprovals |             []            |
++---------------------------+---------------------------+
+Function _setApprovalForAll(address,address,bool)
++---------------------------+------------------------+
+|          Variable         |      Dependencies      |
++---------------------------+------------------------+
+|           owner           |           []           |
+|          operator         |      ['operator']      |
+|          approved         |      ['approved']      |
+|        ERC721._name       |           []           |
+|       ERC721._symbol      |           []           |
+|       ERC721._owners      |           []           |
+|      ERC721._balances     |           []           |
+|   ERC721._tokenApprovals  |           []           |
+| ERC721._operatorApprovals | ['_operatorApprovals'] |
++---------------------------+------------------------+
+Function _requireMinted(uint256)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|          tokenId          | ['tokenId']  |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _checkOnERC721Received(address,address,uint256,bytes)
++---------------------------+--------------+
+|          Variable         | Dependencies |
++---------------------------+--------------+
+|            from           |   ['from']   |
+|             to            |    ['to']    |
+|          tokenId          | ['tokenId']  |
+|            data           |   ['data']   |
+|                           |      []      |
+|           retval          |      []      |
+|           reason          |  ['reason']  |
+|        ERC721._name       |      []      |
+|       ERC721._symbol      |      []      |
+|       ERC721._owners      |      []      |
+|      ERC721._balances     |      []      |
+|   ERC721._tokenApprovals  |      []      |
+| ERC721._operatorApprovals |      []      |
++---------------------------+--------------+
+Function _beforeTokenTransfer(address,address,uint256)
++---------------------------+-------------------+
+|          Variable         |    Dependencies   |
++---------------------------+-------------------+
+|            from           | ['from', 'owner'] |
+|             to            |       ['to']      |
+|          tokenId          |    ['tokenId']    |
+|        ERC721._name       |         []        |
+|       ERC721._symbol      |         []        |
+|       ERC721._owners      |         []        |
+|      ERC721._balances     |         []        |
+|   ERC721._tokenApprovals  |         []        |
+| ERC721._operatorApprovals |         []        |
++---------------------------+-------------------+
+Function _afterTokenTransfer(address,address,uint256)
++---------------------------+-------------------+
+|          Variable         |    Dependencies   |
++---------------------------+-------------------+
+|            from           | ['from', 'owner'] |
+|             to            |       ['to']      |
+|          tokenId          |    ['tokenId']    |
+|        ERC721._name       |         []        |
+|       ERC721._symbol      |         []        |
+|       ERC721._owners      |         []        |
+|      ERC721._balances     |         []        |
+|   ERC721._tokenApprovals  |         []        |
+| ERC721._operatorApprovals |         []        |
++---------------------------+-------------------+
+Contract IERC721
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function balanceOf(address)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  owner   |      []      |
+| balance  |      []      |
++----------+--------------+
+Function ownerOf(uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+| tokenId  |      []      |
+|  owner   |      []      |
++----------+--------------+
+Function safeTransferFrom(address,address,uint256,bytes)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|   from   |      []      |
+|    to    |      []      |
+| tokenId  |      []      |
+|   data   |      []      |
++----------+--------------+
+Function safeTransferFrom(address,address,uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|   from   |      []      |
+|    to    |      []      |
+| tokenId  |      []      |
++----------+--------------+
+Function transferFrom(address,address,uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|   from   |      []      |
+|    to    |      []      |
+| tokenId  |      []      |
++----------+--------------+
+Function approve(address,uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|    to    |      []      |
+| tokenId  |      []      |
++----------+--------------+
+Function setApprovalForAll(address,bool)
++-----------+--------------+
+|  Variable | Dependencies |
++-----------+--------------+
+|  operator |      []      |
+| _approved |      []      |
++-----------+--------------+
+Function getApproved(uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+| tokenId  |      []      |
+| operator |      []      |
++----------+--------------+
+Function isApprovedForAll(address,address)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  owner   |      []      |
+| operator |      []      |
+|          |      []      |
++----------+--------------+
+Contract IERC721Receiver
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function onERC721Received(address,address,uint256,bytes)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+| operator |      []      |
+|   from   |      []      |
+| tokenId  |      []      |
+|   data   |      []      |
+|          |      []      |
++----------+--------------+
+Contract ERC721Enumerable
++--------------------+---------------------------------------------------------------------------+
+|      Variable      |                                Dependencies                               |
++--------------------+---------------------------------------------------------------------------+
+|       _name        |                             ['_name', 'name_']                            |
+|      _symbol       |                           ['_symbol', 'symbol_']                          |
+|      _owners       |                             ['to', '_owners']                             |
+|     _balances      |                               ['_balances']                               |
+|  _tokenApprovals   |                         ['to', '_tokenApprovals']                         |
+| _operatorApprovals |                           ['_operatorApprovals']                          |
+|    _ownedTokens    |                              ['_ownedTokens']                             |
+| _ownedTokensIndex  |         ['tokenIndex', '_ownedTokensIndex', '_balances', 'length']        |
+|     _allTokens     |                  ['_allTokens', 'tokenId', 'lastTokenId']                 |
+|  _allTokensIndex   | ['_allTokensIndex', '_allTokens', 'tokenId', 'tokenIndex', 'lastTokenId'] |
++--------------------+---------------------------------------------------------------------------+
+
+Function supportsInterface(bytes4)
++------------------------------------+--------------+
+|              Variable              | Dependencies |
++------------------------------------+--------------+
+|            interfaceId             |      []      |
+|                                    |      []      |
+|            ERC721._name            |      []      |
+|           ERC721._symbol           |      []      |
+|           ERC721._owners           |      []      |
+|          ERC721._balances          |      []      |
+|       ERC721._tokenApprovals       |      []      |
+|     ERC721._operatorApprovals      |      []      |
+|   ERC721Enumerable._ownedTokens    |      []      |
+| ERC721Enumerable._ownedTokensIndex |      []      |
+|    ERC721Enumerable._allTokens     |      []      |
+|  ERC721Enumerable._allTokensIndex  |      []      |
++------------------------------------+--------------+
+Function tokenOfOwnerByIndex(address,uint256)
++------------------------------------+------------------+
+|              Variable              |   Dependencies   |
++------------------------------------+------------------+
+|               owner                |        []        |
+|               index                |        []        |
+|                                    |        []        |
+|            ERC721._name            |        []        |
+|           ERC721._symbol           |        []        |
+|           ERC721._owners           |        []        |
+|          ERC721._balances          |        []        |
+|       ERC721._tokenApprovals       |        []        |
+|     ERC721._operatorApprovals      |        []        |
+|   ERC721Enumerable._ownedTokens    | ['_ownedTokens'] |
+| ERC721Enumerable._ownedTokensIndex |        []        |
+|    ERC721Enumerable._allTokens     |        []        |
+|  ERC721Enumerable._allTokensIndex  |        []        |
++------------------------------------+------------------+
+Function totalSupply()
++------------------------------------+----------------+
+|              Variable              |  Dependencies  |
++------------------------------------+----------------+
+|                                    |       []       |
+|            ERC721._name            |       []       |
+|           ERC721._symbol           |       []       |
+|           ERC721._owners           |       []       |
+|          ERC721._balances          |       []       |
+|       ERC721._tokenApprovals       |       []       |
+|     ERC721._operatorApprovals      |       []       |
+|   ERC721Enumerable._ownedTokens    |       []       |
+| ERC721Enumerable._ownedTokensIndex |       []       |
+|    ERC721Enumerable._allTokens     | ['_allTokens'] |
+|  ERC721Enumerable._allTokensIndex  |       []       |
++------------------------------------+----------------+
+Function tokenByIndex(uint256)
++------------------------------------+----------------+
+|              Variable              |  Dependencies  |
++------------------------------------+----------------+
+|               index                |       []       |
+|                                    |       []       |
+|            ERC721._name            |       []       |
+|           ERC721._symbol           |       []       |
+|           ERC721._owners           |       []       |
+|          ERC721._balances          |       []       |
+|       ERC721._tokenApprovals       |       []       |
+|     ERC721._operatorApprovals      |       []       |
+|   ERC721Enumerable._ownedTokens    |       []       |
+| ERC721Enumerable._ownedTokensIndex |       []       |
+|    ERC721Enumerable._allTokens     | ['_allTokens'] |
+|  ERC721Enumerable._allTokensIndex  |       []       |
++------------------------------------+----------------+
+Function _beforeTokenTransfer(address,address,uint256)
++------------------------------------+-------------------+
+|              Variable              |    Dependencies   |
++------------------------------------+-------------------+
+|                from                | ['from', 'owner'] |
+|                 to                 |       ['to']      |
+|              tokenId               |    ['tokenId']    |
+|            ERC721._name            |         []        |
+|           ERC721._symbol           |         []        |
+|           ERC721._owners           |         []        |
+|          ERC721._balances          |         []        |
+|       ERC721._tokenApprovals       |         []        |
+|     ERC721._operatorApprovals      |         []        |
+|   ERC721Enumerable._ownedTokens    |         []        |
+| ERC721Enumerable._ownedTokensIndex |         []        |
+|    ERC721Enumerable._allTokens     |         []        |
+|  ERC721Enumerable._allTokensIndex  |         []        |
++------------------------------------+-------------------+
+Function _addTokenToOwnerEnumeration(address,uint256)
++------------------------------------+---------------------------------+
+|              Variable              |           Dependencies          |
++------------------------------------+---------------------------------+
+|                 to                 |              ['to']             |
+|              tokenId               |           ['tokenId']           |
+|               length               |                []               |
+|            ERC721._name            |                []               |
+|           ERC721._symbol           |                []               |
+|           ERC721._owners           |                []               |
+|          ERC721._balances          |                []               |
+|       ERC721._tokenApprovals       |                []               |
+|     ERC721._operatorApprovals      |                []               |
+|   ERC721Enumerable._ownedTokens    |         ['_ownedTokens']        |
+| ERC721Enumerable._ownedTokensIndex | ['_ownedTokensIndex', 'length'] |
+|    ERC721Enumerable._allTokens     |                []               |
+|  ERC721Enumerable._allTokensIndex  |                []               |
++------------------------------------+---------------------------------+
+Function _addTokenToAllTokensEnumeration(uint256)
++------------------------------------+----------------------------------------------+
+|              Variable              |                 Dependencies                 |
++------------------------------------+----------------------------------------------+
+|              tokenId               |                 ['tokenId']                  |
+|            ERC721._name            |                      []                      |
+|           ERC721._symbol           |                      []                      |
+|           ERC721._owners           |                      []                      |
+|          ERC721._balances          |                      []                      |
+|       ERC721._tokenApprovals       |                      []                      |
+|     ERC721._operatorApprovals      |                      []                      |
+|   ERC721Enumerable._ownedTokens    |                      []                      |
+| ERC721Enumerable._ownedTokensIndex |                      []                      |
+|    ERC721Enumerable._allTokens     |          ['_allTokens', 'tokenId']           |
+|  ERC721Enumerable._allTokensIndex  | ['_allTokens', 'tokenId', '_allTokensIndex'] |
++------------------------------------+----------------------------------------------+
+Function _removeTokenFromOwnerEnumeration(address,uint256)
++------------------------------------+-------------------------------------+
+|              Variable              |             Dependencies            |
++------------------------------------+-------------------------------------+
+|                from                |               ['from']              |
+|              tokenId               |             ['tokenId']             |
+|           lastTokenIndex           |                  []                 |
+|             tokenIndex             |        ['_ownedTokensIndex']        |
+|            lastTokenId             |           ['_ownedTokens']          |
+|            ERC721._name            |                  []                 |
+|           ERC721._symbol           |                  []                 |
+|           ERC721._owners           |                  []                 |
+|          ERC721._balances          |                  []                 |
+|       ERC721._tokenApprovals       |                  []                 |
+|     ERC721._operatorApprovals      |                  []                 |
+|   ERC721Enumerable._ownedTokens    |           ['_ownedTokens']          |
+| ERC721Enumerable._ownedTokensIndex | ['tokenIndex', '_ownedTokensIndex'] |
+|    ERC721Enumerable._allTokens     |                  []                 |
+|  ERC721Enumerable._allTokensIndex  |                  []                 |
++------------------------------------+-------------------------------------+
+Function _removeTokenFromAllTokensEnumeration(uint256)
++------------------------------------+-----------------------------------+
+|              Variable              |            Dependencies           |
++------------------------------------+-----------------------------------+
+|              tokenId               |            ['tokenId']            |
+|           lastTokenIndex           |   ['_allTokens', 'lastTokenId']   |
+|             tokenIndex             |        ['_allTokensIndex']        |
+|            lastTokenId             |           ['_allTokens']          |
+|            ERC721._name            |                 []                |
+|           ERC721._symbol           |                 []                |
+|           ERC721._owners           |                 []                |
+|          ERC721._balances          |                 []                |
+|       ERC721._tokenApprovals       |                 []                |
+|     ERC721._operatorApprovals      |                 []                |
+|   ERC721Enumerable._ownedTokens    |                 []                |
+| ERC721Enumerable._ownedTokensIndex |                 []                |
+|    ERC721Enumerable._allTokens     |   ['_allTokens', 'lastTokenId']   |
+|  ERC721Enumerable._allTokensIndex  | ['tokenIndex', '_allTokensIndex'] |
++------------------------------------+-----------------------------------+
+Contract IERC721Enumerable
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function totalSupply()
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|          |      []      |
++----------+--------------+
+Function tokenOfOwnerByIndex(address,uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  owner   |      []      |
+|  index   |      []      |
+|          |      []      |
++----------+--------------+
+Function tokenByIndex(uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  index   |      []      |
+|          |      []      |
++----------+--------------+
+Contract IERC721Metadata
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function name()
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|          |      []      |
++----------+--------------+
+Function symbol()
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|          |      []      |
++----------+--------------+
+Function tokenURI(uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+| tokenId  |      []      |
+|          |      []      |
++----------+--------------+
+Contract Address
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function isContract(address)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+| account  |  ['target']  |
+|          |      []      |
++----------+--------------+
+Function sendValue(address,uint256)
++-----------+------------------------------------+
+|  Variable |            Dependencies            |
++-----------+------------------------------------+
+| recipient |                 []                 |
+|   amount  |                 []                 |
+|  success  | ['TUPLE_0', 'recipient', 'amount'] |
++-----------+------------------------------------+
+Function functionCall(address,bytes)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  target  |      []      |
+|   data   |      []      |
+|          |      []      |
++----------+--------------+
+Function functionCall(address,bytes,string)
++--------------+--------------+
+|   Variable   | Dependencies |
++--------------+--------------+
+|    target    |  ['target']  |
+|     data     |   ['data']   |
+| errorMessage |      []      |
+|              |      []      |
++--------------+--------------+
+Function functionCallWithValue(address,bytes,uint256)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  target  |      []      |
+|   data   |      []      |
+|  value   |      []      |
+|          |      []      |
++----------+--------------+
+Function functionCallWithValue(address,bytes,uint256,string)
++--------------+----------------------------------------+
+|   Variable   |              Dependencies              |
++--------------+----------------------------------------+
+|    target    |               ['target']               |
+|     data     |                ['data']                |
+|    value     |               ['value']                |
+| errorMessage |            ['errorMessage']            |
+|              |                   []                   |
+|   success    | ['data', 'value', 'target', 'TUPLE_1'] |
+|  returndata  | ['data', 'value', 'target', 'TUPLE_1'] |
++--------------+----------------------------------------+
+Function functionStaticCall(address,bytes)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  target  |      []      |
+|   data   |      []      |
+|          |      []      |
++----------+--------------+
+Function functionStaticCall(address,bytes,string)
++--------------+-------------------------------+
+|   Variable   |          Dependencies         |
++--------------+-------------------------------+
+|    target    |           ['target']          |
+|     data     |            ['data']           |
+| errorMessage |               []              |
+|              |               []              |
+|   success    | ['data', 'target', 'TUPLE_2'] |
+|  returndata  | ['data', 'target', 'TUPLE_2'] |
++--------------+-------------------------------+
+Function functionDelegateCall(address,bytes)
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|  target  |      []      |
+|   data   |      []      |
+|          |      []      |
++----------+--------------+
+Function functionDelegateCall(address,bytes,string)
++--------------+-------------------------------+
+|   Variable   |          Dependencies         |
++--------------+-------------------------------+
+|    target    |           ['target']          |
+|     data     |            ['data']           |
+| errorMessage |               []              |
+|              |               []              |
+|   success    | ['TUPLE_3', 'data', 'target'] |
+|  returndata  | ['TUPLE_3', 'data', 'target'] |
++--------------+-------------------------------+
+Function verifyCallResult(bool,bytes,string)
++--------------+------------------+
+|   Variable   |   Dependencies   |
++--------------+------------------+
+|   success    |   ['success']    |
+|  returndata  |  ['returndata']  |
+| errorMessage | ['errorMessage'] |
+|              |        []        |
++--------------+------------------+
+Contract Context
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function _msgSender()
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|          |      []      |
++----------+--------------+
+Function _msgData()
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
+|          |      []      |
++----------+--------------+
+Contract Strings
++-----------------+---------------------+
+|     Variable    |     Dependencies    |
++-----------------+---------------------+
+|   _HEX_SYMBOLS  |   ['_HEX_SYMBOLS']  |
+| _ADDRESS_LENGTH | ['_ADDRESS_LENGTH'] |
++-----------------+---------------------+
+
+Function toString(uint256)
++-------------------------+-------------------------------+
+|         Variable        |          Dependencies         |
++-------------------------+-------------------------------+
+|          value          |           ['value']           |
+|                         |               []              |
+|           temp          |       ['temp', 'value']       |
+|          digits         |           ['digits']          |
+|          buffer         | ['digits', 'buffer', 'value'] |
+|   Strings._HEX_SYMBOLS  |               []              |
+| Strings._ADDRESS_LENGTH |               []              |
++-------------------------+-------------------------------+
+Function toHexString(uint256)
++-------------------------+-------------------+
+|         Variable        |    Dependencies   |
++-------------------------+-------------------+
+|          value          |         []        |
+|                         |         []        |
+|           temp          | ['temp', 'value'] |
+|          length         |     ['length']    |
+|   Strings._HEX_SYMBOLS  |         []        |
+| Strings._ADDRESS_LENGTH |         []        |
++-------------------------+-------------------+
+Function toHexString(uint256,uint256)
++-------------------------+---------------------------------------------------------+
+|         Variable        |                       Dependencies                      |
++-------------------------+---------------------------------------------------------+
+|          value          |                        ['value']                        |
+|          length         |              ['_ADDRESS_LENGTH', 'length']              |
+|                         |                            []                           |
+|          buffer         | ['_HEX_SYMBOLS', 'buffer', '_ADDRESS_LENGTH', 'length'] |
+|            i            |            ['i', '_ADDRESS_LENGTH', 'length']           |
+|   Strings._HEX_SYMBOLS  |                     ['_HEX_SYMBOLS']                    |
+| Strings._ADDRESS_LENGTH |                            []                           |
++-------------------------+---------------------------------------------------------+
+Function toHexString(address)
++-------------------------+---------------------+
+|         Variable        |     Dependencies    |
++-------------------------+---------------------+
+|           addr          |          []         |
+|                         |          []         |
+|   Strings._HEX_SYMBOLS  |          []         |
+| Strings._ADDRESS_LENGTH | ['_ADDRESS_LENGTH'] |
++-------------------------+---------------------+
+Function slitherConstructorConstantVariables()
++-------------------------+--------------+
+|         Variable        | Dependencies |
++-------------------------+--------------+
+|   Strings._HEX_SYMBOLS  |      []      |
+| Strings._ADDRESS_LENGTH |      []      |
++-------------------------+--------------+
+Contract ERC165
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function supportsInterface(bytes4)
++-------------+--------------+
+|   Variable  | Dependencies |
++-------------+--------------+
+| interfaceId |      []      |
+|             |      []      |
++-------------+--------------+
+Contract IERC165
++----------+--------------+
+| Variable | Dependencies |
++----------+--------------+
++----------+--------------+
+
+Function supportsInterface(bytes4)
++-------------+--------------+
+|   Variable  | Dependencies |
++-------------+--------------+
+| interfaceId |      []      |
+|             |      []      |
++-------------+--------------+
+../contracts/TicketingService.sol analyzed (14 contracts)
